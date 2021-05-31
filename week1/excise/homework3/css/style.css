@@ -1,0 +1,406 @@
+@charset "utf-8";
+/* CSS Document */
+/*design or fix the size of the website */
+body
+{  
+   font-size: 16px;
+   
+   margin:0px;
+   padding:0px;
+   
+}
+div
+{   
+   
+    margin:0px auto;  /*0px:up,down  auto:left,right*/
+}
+
+#nav{ 
+	width:960px;
+	height:61px;
+	
+}
+#nav a
+{ 
+  font-size:25px;
+  text-decoration:none;
+  
+  
+}
+#nav ul li a
+{  
+   color:white;
+}
+#famousWomen,#organization,#fun
+{
+	width:960px;
+	height:60px;
+	overflow:hidden;
+}
+#nav{
+overflow:hidden;
+}
+#content
+{
+	width:960px;
+	height:1020px;
+}
+#confun
+{  
+    
+   width:960px;
+   height:390px;
+}
+#funcontent ul{
+ list-style-image:url('star.png');
+}
+#conorg ul{
+ list-style-image:url('heart.jpg');
+}
+#conorg{
+ 
+  width:960px;
+   height:300px;
+}
+#menu{
+   width:960px;
+   margin:0px auto;
+   list-style-type:none;  /*point,circle,number,none*/
+   padding:0px;
+}
+#header{
+	width:49px;
+	height:61px;
+   margin:0px 0px;
+   padding:0px;
+  
+   float:left;
+	}
+#header p{
+    
+	float:right;
+	display:block;
+}
+#header img{
+	margin:10px 10px;
+}
+#menu li
+{  
+   
+   float:right;
+   margin:20px 10px;
+   
+}
+#nav ul li a
+{  
+  line-height:18px;
+  font-size:18px;
+  display:block;
+}
+#content table{
+	
+	
+	border-spacing: 20px;
+	}
+table{
+	margin:20px auto;
+	}	
+
+tr td img{
+   
+	height:280px;
+	width:280px;
+}
+#footer{
+	height:40px;
+	width:960px;
+	left:320px;
+	
+	}
+#fdown,#fundown,#odown
+ { 
+ margin:15px 15px; 
+   float:right;
+   
+ }
+ 
+ fun{}
+ #fup h1{
+    float:right;
+ }
+#fup p
+ { 
+ 
+ float:right;
+ }
+ #fup a
+ { 
+ margin:15px 15px; 
+ 
+ float:left;
+ }
+#fup
+ { 
+   margin:
+   width:500px;
+   float:left;
+ }
+ #fup h1
+ { 
+  margin:5px auto;
+ }
+#orgcontent{
+ 
+ width:960px;
+ height:370px;
+ float:left;
+}
+#orgcontent ul{
+   margin:0px 0px;
+   position:relative;
+   line-height: 10%;
+}
+
+#orgpicture{
+ 
+ width:350px;
+ height:200px;
+ float:right;
+
+}
+#content td{
+ 
+}
+#content h2{
+ 
+ margin:2px 2px;
+ padding:0px 0px;
+ text-align:center;
+}
+#content h3{
+ 
+ margin:2px 2px;
+ padding:0px 0px;
+ text-align:center;
+}
+#content p{
+
+ margin:0px 0px;
+ padding:0px 0px;
+
+}
+#content td{
+vertical-align:top;
+ margin:2px 2px;
+ padding:5px 5px;
+ 
+}
+#content tr{
+
+ margin:0px 0px;
+ padding:0px 0px;
+ 
+}
+/*mouse hover*/
+
+
+#nav ul li a:hover
+{  
+   background-color:white;
+}
+
+#orgcontent img {
+  position: absolute;
+  right: 350px;
+  height:260px;
+  width:260px;
+  display: none;
+  float:right;
+ 
+}
+#orgcontent li:hover img {
+  display: block;
+  postion:relative;
+  right:102px;
+  top:102px;
+}
+
+#orgcontent  p:hover{ 
+  color:red;
+}
+
+/*background */
+#footer{
+   background-color:green;
+}
+#footer ul{
+   
+   margin:5px 5px;
+   list-style-type:none;  /*point,circle,number,none*/
+   padding:0px;
+   text-decoration:none;
+   
+}
+
+#footer li{
+float:left;
+margin:0px 6px;
+}
+#confun ul li {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+  padding-left: 5px;
+}
+
+
+#fmid h1
+{   line-height:60px;
+  padding:10px,20px;
+  margin:0px 290px;
+ 
+  text-align:center;
+}
+#organizationmid h1{
+line-height:60px;
+  padding:10px,20px;
+  margin:0px 290px;
+ 
+  text-align:center;
+
+}
+#fumid h1{
+
+  line-height:60px;
+  padding:10px,20px;
+  margin:0px 290px;
+ 
+  text-align:center;
+}
+#orgcontent
+{
+ font-size: 1.2em;
+  line-height: 1.3em;
+  margin-bottom: 1em;
+  padding-left: 5px;
+
+}
+#orgcontent ul li
+ 
+{  width:60%;
+   float:left;
+   margin:8px auto;
+ 
+}
+#orgcontent  img
+{  
+  
+}
+
+body {
+  background-color: rgb(241, 241, 241);
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+a {
+  color: #1D766F;
+  text-decoration: none;
+}
+a:hover {
+  color: #BC2F36;
+}
+
+h1 {
+  font-family: 'Audiowide', cursive;
+  font-size: 1.5em;
+  float: left;
+  line-height: 75px;
+}
+
+h2 {
+  background-color: rgb(60, 60, 60);
+  color: #FFF;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4em;
+   text-align: center;
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 0.3em 0;
+  text-align: center;
+}
+nav li a{
+color: #fff;
+}
+
+
+
+#nav {
+  background-color: #009D92;
+
+}
+#footer{
+
+background-color: #009D92;
+}
+#famousWomen,#organization,#fun{
+
+background-color:rgb(60, 60, 60);
+color:white;
+}
+#footercontent li{
+
+color:white;
+}
+#nav ul li{
+color:white;
+}
+
+@font-face {
+  font-family: 'EntypoRegular';
+  src: url('font/Entypo-webfont.eot');
+  src: url('font/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+       url('font/Entypo-webfont.woff') format('woff'),
+       url('font/Entypo-webfont.ttf') format('truetype'),
+       url('font/Entypo-webfont.svg#EntypoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.jump {
+  color: #565656;
+  font-family:'EntypoRegular';
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  top: 0;
+}
+
+.jump:hover {
+  color: #BC2F36;
+}
+.jump.up {
+  left: 15px;
+}
+.jump.down {
+  right: 15px;
+}
+
+#nav h1{
+  color:white;
+  font-size:30px;
+  padding:0px 0px;
+  margin:0px 0px; 
+  line-height:48px;
+}
+#footercontent ul li{
+   font-size:16px;
+
+}
+#content tr td{
+   background-color:white;
+
+}
