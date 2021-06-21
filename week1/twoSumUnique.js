@@ -18,3 +18,22 @@ Output: 1
 Explanation:
 1 + 1 = 2
  */
+
+var twoSum = function(numbers, target) {
+  const set1 = new Set();
+  const set2 = new Set();
+  let count = 0;
+  for (let i = 0; i < numbers.length; i++) {
+  	console.log("now number is " + numbers[i]);
+    if (set1.has(target - numbers[i]) && !set2.has(numbers[i])) {
+      count ++;
+      set2.add(numbers[i]);
+      console.log("set2 add " + numbers[i]);
+    }
+    else if (!set1.has(numbers[i])) {
+      set1.add(numbers[i]);
+      console.log("set1 add " + numbers[i]);
+    }
+  }
+  return count;
+};

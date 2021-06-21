@@ -19,3 +19,25 @@ Could you come up with an one-pass algorithm using only constant space?
 You are not suppose to use the library's sort function for this problem.
 You should do it in-place (sort numbers in the original array).
  */
+
+
+function swap(array, x, y) {
+    let tmp = array[x];
+    array[x] = array[y];
+    array[y] = tmp;
+}
+
+function bubbleSort(array, n) {
+    for (let i = 0; i < n-1; i++) {
+        for (let j = 0; j < n-i-1; j++) {
+            if (array[j] > array[j+1]) {
+                swap(array,j,j+1);
+            }
+        }
+    }
+}
+
+
+var sortColors = function(nums) {
+    bubbleSort(nums, nums.length);
+};

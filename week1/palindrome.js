@@ -20,3 +20,16 @@ Have you consider that the string might be empty? This is a good question to ask
 
 For the purpose of this problem, we define empty string as valid palindrome.
  */
+
+var isPalindrome = function(s) {
+    let tmp = s.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
+    // console.log(tmp)
+    let front = 0;
+    let back = tmp.length-1;
+    while (front < back) {
+        if (tmp[front] != tmp[back]) return false;
+        front = front + 1;
+        back = back - 1;
+    }
+    return true;
+};

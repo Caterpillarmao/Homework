@@ -11,3 +11,18 @@ add(1); add(3); add(5);
 find(4) // return true
 find(7) // return false
  */
+
+
+var twoSum = function(nums, target) {
+    let index1 = 0;
+    let index2 = 1;
+    for (let i = 0; i < nums.length; i++) {
+        let sub = target - nums[i];
+        nums[i] = null;
+        if (nums.includes(sub)) {
+            index1 = i;
+            index2 = nums.indexOf(sub);
+            return [index1, index2];
+        }
+    }
+};
