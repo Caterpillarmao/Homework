@@ -3,6 +3,8 @@ body {
     width: 64vw;
     /* min-width: 860px; */
     height: 100vh;
+    min-height: 950px;
+    max-height: 1000px;
     background-color: #F1F1F1;
 }
 
@@ -32,6 +34,7 @@ body {
     position: relative;
     text-align: center;
     float: left;
+    font-size: 170%;
     /* margin-left: 5%; */
     width: 30%;
     height: 100%;
@@ -40,17 +43,54 @@ body {
 #title p{
     position: absolute;
     margin-top:0;
-    font-size: 170%;
+    margin-left: 4%;
     width: 100%;
     height: 100%;
     color: white;
+    white-space: nowrap;
     top: 15%;
+}
+
+.showmore{
+    display: none;
+    height: auto;
+    position: absolute;
+    width: auto;
+    right: 5%;
+    top: 5%;
+    z-index: 2;
+}
+
+.showmore-button{
+    display: inline-block;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+}
+
+.clicktab{
+    display: none;
+    position: relative;
+    background-color: white;
+    border-radius: 2px;
+    transform: translateY(50%);
+}
+
+/* .showmore-button:hover{
+    background-color: red;
+} */
+
+.showmore:hover .clicktab{
+    display: block;
 }
 
 #tabs {
     display: flex;
     justify-content: space-around;
     float: right;
+    margin-right: 1%;
     width:50%;
     height:100%;
     /* background-color: blue; */
@@ -67,6 +107,7 @@ body {
     /* background-color: red; */
     text-align: center;
     font-size: 120%;
+    white-space: nowrap;
 }
 
 .tab p{
@@ -77,6 +118,7 @@ body {
 .tab:hover {
     cursor: pointer;
 }
+
 
 #famous{
     position: relative;
@@ -145,10 +187,10 @@ body {
 }
 
 .infocard {
-    margin: 1% 1% 1% 1%;
+    margin: 1%  auto;
     padding: 0.25%;
     width:30%;
-    min-width: 250px;
+    min-width: 300px;
     height: 500px;
     background-color: white;
     display: grid;
@@ -199,7 +241,7 @@ body {
     padding: 2%;
     text-align: center;
     font-weight: bold;
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .organization{
@@ -207,13 +249,13 @@ body {
     width: 100%;
     height: 70%;
     /* background-color: red; */
-    font-size: 20px;
     grid-template-rows: 8% 5% auto;
 }
 
 .organization-title{
     position: relative;
     width: 100%;
+    font-size: 20px;
     background-color: #3c3c3c;
 }
 
@@ -244,6 +286,7 @@ body {
 
 .organization-list{
     /* background-color: salmon; */
+    font-size: 150%;
 }
 
 .organization-list ul{
@@ -251,8 +294,8 @@ body {
 }
 
 .organization-list ul li{
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 35px;
+    /* margin-bottom: 40px; */
     list-style: '\1F95E';
 }
 
@@ -309,4 +352,14 @@ body {
     top: 20%;
     color: white;
     margin-left: 2%;
+}
+
+@media screen and (max-width: 1200px) {
+    .showmore {
+        display: block;
+    }
+    #tabs{
+        display: none;
+    }
+
 }
