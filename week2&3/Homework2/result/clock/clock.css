@@ -1,0 +1,46 @@
+.clock{
+    background-color: pink;
+    height: 400px;
+    width: 400px;
+}
+
+.clock-circle{
+    background-color: aqua;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#hour-pin{
+    position: absolute;
+    top: 50%;
+    width:33%;
+    right: 50%;
+    background-color: black;
+    height: 5px;
+    transform-origin: right;
+    z-index: 2;
+}
+
+#min-pin{
+    position: absolute;
+    top: 50%;
+    width:44%;
+    right: 50%;
+    height: 5px;
+    background-color: blue;
+    transform-origin: right;
+    z-index: 1;
+}
+
+#second-pin{
+    position: absolute;
+    top: 50%;
+    width:49%;
+    right: 50%;
+    height: 5px;
+    background-color: white;
+    transform-origin: right;
+    z-index:0;
+}
