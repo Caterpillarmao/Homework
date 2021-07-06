@@ -1,0 +1,19 @@
+.rating {
+  position: relative;
+  width: 180px;
+}
+
+.rating__star {
+  font-size: 1.3em;
+  cursor: pointer;
+  color: #dabd18b2;
+  transition: filter linear 0.3s;
+}
+
+.rating__star:hover {
+  filter: drop-shadow(1px 1px 4px gold);
+}
+
+.rating__result {
+  position: absolute;
+}
