@@ -1,0 +1,44 @@
+.App{
+  position: relative;
+  margin:auto;
+  width:500px;
+  height: 700px;
+  /* background-color: aqua; */
+  display: grid;
+  grid-template-rows: 12% 15% auto;
+}
+
+.App-title{
+  margin: auto;
+  /* background-color: red; */
+  /* width: 50%; */
+  font-size: 300%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.APP-button{
+  /* background-color: blue; */
+  text-align: center;
+}
+
+.APP-button button{
+  height: 55%;
+  width: 30%;
+  border:none;
+  /* border-radius: 50%; */
+  border-bottom-left-radius: 3em;
+  border-top-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+  border-top-right-radius: 3em;
+  background-color: #4051b5;
+  color: white;
+  font-size: 110%;
+  box-shadow: 5px 10px 18px #888888;
+  font-weight: bold;
+}
+
+.APP-result{
+  background-color: green;
+}
+
