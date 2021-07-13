@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+  width: 100vw;
+}
+
+.main-title{
+  width:100%;
+  background-color: aqua;
+  font-size: 50px;
+}
+
+.detail{
+  position: relative;
+  width: 1000px;
+  background-color: teal;
+  font-size: 40px;
+}
+
+.main-area{
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  background-color: red;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 10% 15% auto;
+}
+
+.main-board{
+  background-color: salmon;
+}
+
+.board-prop{
+  width:100%;
+  height:100%;
+}
+
+.board{
+  position: relative;
+  width: 755px;
+  margin: auto;
+  height: 100%;
+  background-color: springgreen;
+  display:grid;
+  grid-template-columns: 250px 250px 250px;
+  grid-template-rows: 250px 250px 250px;
+  /* text-align: center; */
+}
+
+.block{
+    background-color: yellow;
+    /* margin: auto; */
+    margin-left: 5px;
+    margin-top: 5px;
+}
