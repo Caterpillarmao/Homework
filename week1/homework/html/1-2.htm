@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <style>
+      #card {
+        width: 470px;
+        height: 640px;
+        transition: 0.5s ease-in-out;
+        /* 扑克牌背面 */
+        background-image: url("front.png");
+        background-size: cover;
+      }
+      #card.card-flip {
+        transform: rotateY(180deg);
+        /* 扑克牌正面 */
+        background-image: url("back.png");
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card"></div>
+    <script>
+      const card = document.querySelector("#card");
+      card.addEventListener("click", function () {
+        this.classList.toggle("card-flip");
+      });
+    </script>
+  </body>
+</html>
