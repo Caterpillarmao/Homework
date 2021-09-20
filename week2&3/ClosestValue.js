@@ -28,3 +28,28 @@ Binary tree {3,2,4,1},  denote the following structure:
 Given target value is a floating point.
 You are guaranteed to have only one unique value in the BST that is closest to the target.
  */
+
+var cloestValue = function (root, target) {
+  if (root === null) {
+    return null;
+  }
+  let node = root;
+  let minDiff = Infinity;
+  let result = null;
+  while (node !== null) {
+    if (node.val - target === 0) {
+      return node.val;
+    }
+    if (Math.abs(node.val - target) < minDiff) {
+      minDiff = Math.abs(node.val - target);
+      result = node.val
+    }
+    if (node.val > target) {
+      node = node.left;
+    }
+    else {
+      node = node.right;
+    }
+  }
+  return result;
+}

@@ -1,0 +1,27 @@
+div {
+    border: 1px solid white;
+    background-color: aquamarine;
+    width: 300px;
+    height: 300px;
+}
+
+/* section {
+    display: flex;
+} */
+
+#one {
+    position: absolute;
+    top:10px;
+}
+
+#two {
+    position: absolute;
+    top: 10px;
+    left: 310px;
+}
+
+#three {
+    position: absolute;
+    top :10px;
+    left:610px;
+}

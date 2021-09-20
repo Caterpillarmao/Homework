@@ -15,3 +15,41 @@ Example 2:
 Input: n = 2, prerequisites = [[1,0],[0,1]] 
 Output: false
  */
+
+// topological sort
+var courseSchedule = function (n, prerequisites) {
+    let take = new Set();
+    let graph = {};
+    let indegrees = new Array(n);
+
+    // build graph
+    for (let prereq of prerequisites) {
+        graph[prereq[1]] = prereq[0];
+        indegrees[prereq[0]] += 1;
+    }
+
+    let queue = [];
+    for (let i = 0; i < n; i++) {
+        if (indegrees[i] === undefined) {
+            queue.push(i);
+        }
+    }
+
+    while (queue.length > 0) {
+        for (let i = 0; i < queue.length; i++) {
+            let course = queue.shift();
+            take.add(course);
+            for (let next of graph[course]) {
+                if (!take.has(next)) {
+                    indegrees[next] -= 1;
+                    if (indegrees[next] == 0) {
+                        queue.push(next);
+                    }
+                }
+            }
+        }
+
+    }
+    return take.length === n;
+
+}

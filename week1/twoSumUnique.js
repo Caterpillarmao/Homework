@@ -18,3 +18,20 @@ Output: 1
 Explanation:
 1 + 1 = 2
  */
+var twoSumUnique = function (nums, target) {
+    let set = new Set();
+    let seen = new Set();
+    let count = 0;
+    for (let num of nums) {
+        if (set.has(target - num) && !seen.has(num)) {
+            count++;
+            seen.add(num);
+            seen.add(target - num);
+        }
+        else if (!set.has(num)) {
+            set.add(num);
+        }
+    }
+    return count;
+}
+

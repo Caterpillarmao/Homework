@@ -22,3 +22,22 @@ Do I need to implement KMP Algorithm in a real interview?
 
 Not necessary. When you meet this problem in a real interview, the interviewer may just want to test your basic implementation ability. But make sure you confirm with the interviewer first.
  */
+var strStr = function (haystack, needle) {
+    if (needle.length === 0) {
+        return 0;
+    }
+    for (let i = 0; i < haystack.length - needle.length + 1; i++) {
+        let j = 0;
+        while (j < needle.length) {
+            if (needle[j] !== haystack[j + i]) {
+                break;
+            }
+            j += 1;
+        }
+        if (j === needle.length) {
+            return i;
+        }
+
+    }
+    return -1;
+};

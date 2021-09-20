@@ -19,3 +19,27 @@ Could you come up with an one-pass algorithm using only constant space?
 You are not suppose to use the library's sort function for this problem.
 You should do it in-place (sort numbers in the original array).
  */
+var sortColors = function (nums) {
+    let p0 = 0;
+    let p2 = nums.length - 1;
+    let curr = 0;
+    while (curr <= p2) {
+        if (nums[curr] === 0) {
+            let tmp = nums[curr];
+            nums[curr] = nums[p0];
+            nums[p0] = tmp;
+            p0 += 1;
+            curr += 1
+        }
+        else if (nums[curr] === 2) {
+            let tmp = nums[curr];
+            nums[curr] = nums[p2];
+            nums[p2] = tmp;
+            p2 -= 1;
+        }
+        else {
+            curr += 1;
+        }
+    }
+    return
+};

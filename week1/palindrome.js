@@ -20,3 +20,29 @@ Have you consider that the string might be empty? This is a good question to ask
 
 For the purpose of this problem, we define empty string as valid palindrome.
  */
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function (s) {
+    s = s.toLowerCase();
+    let left = 0;
+    let right = s.length - 1;
+    let alpha = 'abcdefghijklmnopqrstuvwxyz';
+    let nums = '0123456789';
+    while (left <= right) {
+        while (left <= right && alpha.indexOf(s[left]) === -1 && nums.indexOf(s[left]) === -1) {
+            left += 1;
+        }
+        while (left <= right && alpha.indexOf(s[right]) === -1 && nums.indexOf(s[right]) === -1) {
+            right -= 1;
+        }
+        if (left <= right && s[left] !== s[right]) {
+            return false;
+        }
+        left += 1;
+        right -= 1;
+    }
+    return true;
+};

@@ -1,0 +1,41 @@
+#myCanvas {
+    border:5px solid black;
+    width: 90%;
+    height: 90%;
+}
+
+
+div {
+    padding: 0.5em;
+    margin:0.5em;
+}
+
+div:focus {
+    background-color: aquamarine;
+}
+@media (max-width: 1024px) {
+    div {
+        display: inline-block;
+        width:25%;
+        height:30%;
+        background-color: red;
+    }
+}
+
+@media (max-width: 768px) {
+    div {
+        display: inline-block;
+        width:25%;
+        height:30%;
+        background-color: blue;
+    }
+}
+
+@media (max-width: 576px) {
+    div {
+        display: block;
+        width: 80%;
+        height: 30%;
+        background-color: yellow;
+    }
+}

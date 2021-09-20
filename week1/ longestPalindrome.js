@@ -13,3 +13,13 @@ One longest palindrome that can be built is "dccaccd", whose length is `7`.
 
 Assume the length of given string will not exceed 100000.
  */
+
+var longestPalindrome = function (s) {
+    let counter = {};
+    let ans = 0;
+    for (let char of s) {
+        counter[char] = (counter[char] || 0) + 1;
+        if (counter[char] % 2 === 0) ans += 2;
+    }
+    return s.length > ans ? ans + 1 : ans;
+};
