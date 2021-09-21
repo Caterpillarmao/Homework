@@ -18,38 +18,38 @@ Output: false
 
 // topological sort
 var courseSchedule = function (n, prerequisites) {
-    let take = new Set();
-    let graph = {};
     let indegrees = new Array(n);
-
-    // build graph
-    for (let prereq of prerequisites) {
-        graph[prereq[1]] = prereq[0];
-        indegrees[prereq[0]] += 1;
+    for (let i = 0; i < n; i++) {
+        indegrees[i] = 0;
     }
-
+    let graph = {};
+    for (let pair of prerequisites) {
+        let [course, pre] = pair;
+        if (!(course in graph)) {
+            graph[course] = [];
+        }
+        graph[course].push(pre);
+        indegrees[pre] += 1;
+    }
     let queue = [];
     for (let i = 0; i < n; i++) {
-        if (indegrees[i] === undefined) {
+        if (indegrees[i] === 0) {
             queue.push(i);
         }
     }
-
+    let taken = 0;
     while (queue.length > 0) {
-        for (let i = 0; i < queue.length; i++) {
-            let course = queue.shift();
-            take.add(course);
-            for (let next of graph[course]) {
-                if (!take.has(next)) {
-                    indegrees[next] -= 1;
-                    if (indegrees[next] == 0) {
-                        queue.push(next);
-                    }
-                }
+        let curr_course = queue.pop();
+        taken += 1;
+        if (!(curr_course in graph)) {
+            continue;
+        }
+        for (let pre of graph[curr_course]) {
+            indegrees[pre] -= 1;
+            if (indegrees[pre] === 0) {
+                queue.push(pre);
             }
         }
-
     }
-    return take.length === n;
-
+    return taken === n;
 }
