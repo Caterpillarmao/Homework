@@ -1,21 +1,24 @@
-
+body {
+    background-color: black;
+}
 #calculator {
+    background-color: rgb(90, 90, 90);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    width:800px;
+    width:500px;
     height:1200px;
 }
 
 #screen {
     border: 1px solid black;
     position: relative;
-    width: 50%;
+    width: 80%;
     height: 20%;
 }
 div.keyboard{
-    width: 50%;
+    width: 80%;
     height:40%;
     display: flex;
     flex-direction: row;
@@ -38,13 +41,24 @@ button {
     font-size: larger;
 }
 
+div.number button{
+    background-color:rgb(59, 59, 59)
+}
+
+div.operand button {
+    background-color: chocolate;
+}
+
+
 .container {
+    background-color: black;
     display: flex;
     justify-content: center;
     flex-direction: row;
 }
 
 #currentNumber {
+    background-color:rgb(180, 160, 136);
     width:100%;
     height:50%;
     display: flex;
@@ -52,6 +66,7 @@ button {
 }
 
 #evaluation {
+    background-color: rgba(250, 235, 215, 0.575);
     width: 100%;
     height: 50%;
     display: flex;
@@ -59,12 +74,17 @@ button {
     border-bottom: 1px solid black;
 }
 
+button {
+    border-radius: 2em;
+}
+
 #currentNumber span {
+    font-size: 3rem;
     width: 100%;
-    height: 100%;
-    margin-top: 1em;
-    font-size: xx-large;
+    height: 40%;
     text-align: end;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 #evaluation span {

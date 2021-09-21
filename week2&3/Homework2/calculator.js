@@ -60,7 +60,9 @@ for (let button of operandButtonAll) {
         else if (button.innerText === '=') {
             expression.innerText += ` ${screen.innerText}`;
             screen.innerText = '';
-            screen.innerText = eval(expression.innerText);
+            let tmp = eval(expression.innerText);
+            screen.innerText = tmp;
+            console.log(screen.innerText);
             expression.innerText = '';
         }
     })
