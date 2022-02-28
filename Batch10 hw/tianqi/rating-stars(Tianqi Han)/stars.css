@@ -1,0 +1,32 @@
+.rating{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.rating li{
+    list-style-type: none;
+}
+
+.rating-star{
+    border: 1px solid white;
+    font-size: 2em;
+    color: orange;
+    cursor: pointer;
+}
+
+.rating-star::before{
+    content: "\2605";
+}
+
+.rating-star.active ~ .rating-star::before{
+    content: "\2606";
+}
+
+.rating:hover .rating-star::before{
+    content: "\2605";
+}
+
+.rating-star:hover ~ .rating-star::before{
+    content: "\2606";
+}
